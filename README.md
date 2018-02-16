@@ -1,4 +1,4 @@
-This project was done in a few hours to practice utilizing YouTube's API
+This project was done in a few hours to practice utilizing The Movie Database's API
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
