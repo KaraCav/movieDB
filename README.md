@@ -1,3 +1,5 @@
+This project was done in a few hours to practice utilizing The Movie Database's API
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
