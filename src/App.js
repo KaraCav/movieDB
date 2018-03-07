@@ -9,18 +9,28 @@ class App extends Component {
     this.state = {
       moviesList: []
     };
+    this.overviewDisplay = this.overviewDisplay.bind(this);
   }
+
   componentWillMount() {
     axios.get('http://localhost:3001/api/popular/movies').then(response => {
       this.setState({ moviesList: response.data.results });
-      console.log(response.data.results);
     });
+  }
+  overviewDisplay(index) {
+    console.log(this.state.moviesList[index].overview);
+    return `<div>
+    ${this.state.moviesList[index].overview}</div>`;
   }
   render() {
     const imgURL = 'http://image.tmdb.org/t/p/original';
     const movies = this.state.moviesList.map((movie, index) => {
       return (
-        <div key={index} className="movie-card">
+        <div
+          key={index}
+          className="movie-card"
+          onMouseDown={() => this.overviewDisplay(index)}
+        >
           <img
             className="movie-card-pic"
             style={({ height: '100%' }, { width: '100%' })}

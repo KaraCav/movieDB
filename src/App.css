@@ -16,13 +16,15 @@
   height: 60vh;
   width: 20%;
   margin: 5px;
-  box-shadow: 0 0 19px 0 #111;
+  box-shadow: 0 0 15px 0 #111;
   margin-bottom: 5%;
 }
 .movie-card-pic {
   height: 60vh;
-  width: 20%;
-  /* box-shadow: 0 0 9px 0 #111; */
-  /* margin: 5px; */
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+}
+.movie-card :hover {
+  border: 2px solid rgb(5, 5, 5);
+  box-shadow: 0 0 20px 0 #111;
+  margin-bottom: 2%;
 }
