@@ -8,14 +8,21 @@
 .movies-container-main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 .movie-card {
   height: 60vh;
-  width: 30%;
-  box-shadow: 0 0 4px 0 #111;
+  width: 20%;
   margin: 5px;
+  box-shadow: 0 0 19px 0 #111;
+  margin-bottom: 5%;
+}
+.movie-card-pic {
+  height: 60vh;
+  width: 20%;
+  /* box-shadow: 0 0 9px 0 #111; */
+  /* margin: 5px; */
   margin-bottom: 5%;
 }

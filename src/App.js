@@ -13,6 +13,7 @@ class App extends Component {
   componentWillMount() {
     axios.get('http://localhost:3001/api/popular/movies').then(response => {
       this.setState({ moviesList: response.data.results });
+      console.log(response.data.results);
     });
   }
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
       return (
         <div key={index} className="movie-card">
           <img
-            className="movie-card"
+            className="movie-card-pic"
             style={({ height: '100%' }, { width: '100%' })}
             src={`${imgURL}${movie.poster_path}`}
           />
