@@ -18,9 +18,11 @@ class App extends Component {
     });
   }
   overviewDisplay(index) {
-    console.log(this.state.moviesList[index].overview);
-    return `<div>
-    ${this.state.moviesList[index].overview}</div>`;
+    const thisOverview = this.state.moviesList[index].overview;
+    console.log(thisOverview);
+    // this.style.display = 'block';
+
+    return `<div>${this.state.moviesList[index].overview}</div>`;
   }
   render() {
     const imgURL = 'http://image.tmdb.org/t/p/original';
@@ -29,20 +31,24 @@ class App extends Component {
         <div
           key={index}
           className="movie-card"
-          onMouseDown={() => this.overviewDisplay(index)}
+          onMouseOver={() => this.overviewDisplay(index)}
         >
           <img
             className="movie-card-pic"
             style={({ height: '100%' }, { width: '100%' })}
             src={`${imgURL}${movie.poster_path}`}
           />
-          <p>{movie.title}</p>
+          <div className="overview" style={{ display: 'none' }}>
+            {movie.overview}
+          </div>
+
+          <p style={{ border: 'none' }}>{movie.title}</p>
         </div>
       );
     });
     return (
-      <div>
-        <h1>My Movie App</h1>
+      <div className="main-div">
+        <h1>Now Playing</h1>
         <div className="movies-container-main">{movies}</div>
       </div>
     );

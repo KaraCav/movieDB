@@ -4,7 +4,13 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+h1 {
+  padding: 10px;
+}
+.main-div {
+  background-color: rgba(128, 128, 128, 0.555);
+  margin-top: -22px;
+}
 .movies-container-main {
   display: flex;
   flex-direction: row;
